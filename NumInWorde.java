@@ -9,7 +9,7 @@ public class NumInWorde {
         b = (Num / 100) - (a * 10);
         c = Num / 10 - ((a * 100) + (b * 10));
         d = Num - ((a * 1000) + (b * 100) + (c * 10));
-        System.out.println("Digits are from Right to Left");
+        System.out.println("Digits are from  Left to Right ");
         System.out.println("1st digit = " + a + " ,2nd digit = " + b + " ,3rd digit = " + c + " ,4th digit = " + d);
         System.out.println("Num is = " + Num);
         switch (a) {
