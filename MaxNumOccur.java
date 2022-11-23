@@ -11,6 +11,9 @@ public class MaxNumOccur {
                 max = a;
             }
         }
+        if (Onum >= 1) {
+            Onum += 1;
+        }
         System.out.println(" \n Max value is " + max + ", and it occurrence " + Onum);
     }
 }
