@@ -28,6 +28,6 @@ public class GcdOfTwoNum {
         if (a == 0 && b == 0) {
             Gnum = 0;
         }
-        System.out.println("GCD is " + Gnum);
+        System.out.println(a + " and " + b + " GCD is = " + Gnum);
     }
 }
