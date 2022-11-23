@@ -5,7 +5,7 @@ public class MaxNumOccur {
             int a = (int) (Math.random() * 100);
             System.out.print(a + " , ");
             if (a >= max) {
-                if (a == max) {
+                if (a == max) { // this true, when num is occurres 2nd and more time
                     Onum += 1;
                 }
                 max = a;
