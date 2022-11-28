@@ -41,6 +41,11 @@ public class NumPattern {
                         if (r == 1) {
                             break;
                         }
+                        // for (int u = i; (u == 1 && u < 2); u--) {
+                        // for (int p = r; (p == 1 && p < 2); p--) {
+                        // break;
+                        // }
+                        // }
                         System.out.print((r - 1) + " ");
                     }
 
