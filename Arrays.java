@@ -77,9 +77,6 @@ public class Arrays {
 
         System.out.println("\n>>>>>>>>>>>>>>>>>>>   4   <<<<<<<<<<<<<<<<<<<<<<");
         int ary1[] = new int[10];
-        for (int value : ary1) {
-            System.out.print(+value + " , ");
-        }
 
         for (int i = 0; i < 10; i++) {
             ary1[i] = (int) (Math.random() * 10);
@@ -88,71 +85,28 @@ public class Arrays {
         for (int value : ary1) {
             System.out.print(+value + " , ");
         }
-        System.out.println("\n * Patten  for Array is :-");
-        int t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0, t6 = 0, t7 = 0, t8 = 0, t9 = 0, t10 = 0;
+        int nomax = 0;
         for (int i = 0; i < ary1.length; i++) {
+
             for (int j = 0; j < ary1.length; j++) {
-                if ((i == (ary1.length - ary1[0] + t1)) && j == 0) {
-                    System.out.print("*");
-                    t1 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[1] + t2)) && j == 1) {
-                    System.out.print("*");
-                    t2 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[2] + t3)) && j == 2) {
-                    System.out.print("*");
-                    t3 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[3] + t4)) && j == 3) {
-                    System.out.print("*");
-                    t4 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[4] + t5)) && j == 4) {
-                    System.out.print("*");
-                    t5 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[5] + t6)) && j == 5) {
-                    System.out.print("*");
-                    t6 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[6] + t7)) && j == 6) {
-                    System.out.print("*");
-                    t7 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[7] + t8)) && j == 7) {
-                    System.out.print("*");
-                    t8 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[8] + t9)) && j == 8) {
-                    System.out.print("*");
-                    t9 += 1;
-                } else {
-                    System.out.print(" ");
-                }
-                if ((i == (ary1.length - ary1[9] + t10)) && j == 9) {
-                    System.out.print("*");
-                    t10 += 1;
-                } else {
-                    System.out.print(" ");
+                if (nomax <= ary1[j]) {
+                    nomax = ary1[j];
                 }
             }
+        }
+        System.out.println("\n max Element is :-" + nomax);
+        System.out.println("\n * Patten  for Array is :-");
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < ary1.length; j++) {
+                if (ary1[j] > nomax) {
+                    System.out.print("*");
+
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            nomax -= 1;
             System.out.println();
         }
     }
