@@ -98,7 +98,7 @@ public class Arrays {
         System.out.println("\n * Patten  for Array is :-");
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < ary1.length; j++) {
-                if (ary1[j] > nomax) {
+                if (ary1[j] >= nomax) {
                     System.out.print("*");
 
                 } else {
