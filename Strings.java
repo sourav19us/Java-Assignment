@@ -57,23 +57,28 @@ public class Strings {
         System.out.println(">>>>>>>>>>>>>>>>>>>   4  <<<<<<<<<<<<<<<<<<");
         int fno = 1;
         char ch;
+        int j = 0;
         for (int i = 1; i <= str1.length(); i++) {
             fno = fno * i;
         }
         for (int i = 0; i < fno; i++) {
 
-            for (int j = 0; j < str1.length(); j++) {
-
-                if ((j + 1) < str1.length()) {
-                    ch = arr[j];
-                    arr[j] = arr[(j + 1)];
-                    arr[(j + 1)] = ch;
-                }
-                for (char c : arr1) {
-                    System.out.print(c);
-                }
-                System.out.println();
+            if ((j + 1) < str1.length()) {
+                ch = arr[j];
+                arr[j] = arr[(j + 1)];
+                arr[(j + 1)] = ch;
+                j += 1;
+            } else {
+                ch = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = ch;
+                j = 0;
             }
+            for (char c : arr) {
+                System.out.print(c);
+            }
+            System.out.println();
+
         }
     }
 
