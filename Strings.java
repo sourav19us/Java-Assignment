@@ -78,8 +78,12 @@ public class Strings {
                 System.out.print(c);
             }
             System.out.println();
-
         }
+        System.out.println(">>>>>>>>>>>>>>>>>>>   5  <<<<<<<<<<<<<<<<<<");
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("hello " + args[i]);
+        }
+
     }
 
 }
