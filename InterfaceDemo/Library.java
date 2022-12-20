@@ -17,14 +17,13 @@ public class Library {
             if (str.equalsIgnoreCase("b")) {
 
                 ref[i] = new Book();
-                ref[i].read();
-
+                // ref[i].read();
             } else {
 
                 ref[i] = new Dvd();
-                ref[i].read();
-
+                // ref[i].read();
             }
+            ref[i].read();
         }
 
         for (int i = 0; i < ref.length; i++) {
