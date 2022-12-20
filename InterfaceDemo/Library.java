@@ -2,36 +2,34 @@ import java.io.Console;
 
 import pkg.Book;
 import pkg.Dvd;
+import pkg.item.Item;
 
 public class Library {
     public static void main(String[] args) {
 
         Console con = System.console();
 
-        Book b[] = new Book[10];
-        Dvd d[] = new Dvd[10];
+        Item ref[] = new Item[10];
 
-        int bk = 0;
-        int dvd = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < ref.length; i++) {
             System.out.print("Book or DVD < b / d > :- ");
             String str = con.readLine();
             if (str.equalsIgnoreCase("b")) {
-                b[bk] = new Book();
-                b[bk].read();
-                bk++;
+
+                ref[i] = new Book();
+                ref[i].read();
+
             } else {
-                d[dvd] = new Dvd();
-                d[dvd].read();
-                dvd++;
+
+                ref[i] = new Dvd();
+                ref[i].read();
+
             }
         }
 
-        for (int i = 0; i < bk; i++) {
-            b[i].show();
+        for (int i = 0; i < ref.length; i++) {
+            ref[i].show();
         }
-        for (int i = 0; i < dvd; i++) {
-            d[i].show();
-        }
+
     }
 }
